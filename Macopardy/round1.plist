@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Compiler</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>#pragma clang diagnostic push</string>
+			<key>question</key>
+			<string>Wie leitet man den Befehl an den Compiler an, bestimmte Warnings in einem Code-Block nicht anzuwenden?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>k.A.</string>
+			<key>question</key>
+			<string>k.A.</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>error: read failed: The data couldn’t be read because it isn’t in the correct format.</string>
+			<key>question</key>
+			<string>Welche Fehlermeldung kommt bei einem Syntaxfehler in der Strings-Datei?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>answer</key>
+			<string>Command /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool failed with exit code 255</string>
+			<key>question</key>
+			<string>Welcher IB-Fehler tauchte mit Xcode 7 auf und ließ sich durch simples Neukompilieren beheben?</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tools</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>clang-format</string>
+			<key>question</key>
+			<string>Mit welchem Tool kann man Code formatieren?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>xcodebuild -list</string>
+			<key>question</key>
+			<string>Welcher CLI-Befehl gibt alle Targets und deren Configurations eines Xcode-Projektes aus?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>question</key>
+			<string>Wie sieht die UI des Bluetooth Explorer (Bluetooth Status) in Xcode 7 aus?</string>
+			<key>image</key>
+			<string>bluetooth_explorer</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>question</key>
+			<string>Wie sieht die UI des Accessibility Inspectors in Xcode 7 aus?</string>
+			<key>image</key>
+			<string>accessibility_inspector</string>
+		</dict>
+	</dict>
+</array>
+</plist>

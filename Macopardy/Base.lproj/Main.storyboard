@@ -1,26 +1,436 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3f-i9-DX6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Round View Controller-->
+        <scene sceneID="TKF-iL-jup">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="v3f-i9-DX6" customClass="RoundViewController" customModule="Macopardy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="fR7-DL-GzP"/>
+                        <viewControllerLayoutGuide type="bottom" id="n4G-Uj-evV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="caf-RD-Ibn">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-8t-G9y">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Macopardy 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYt-zT-Ljg">
+                                        <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="k7X-7h-Xs4">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4Z-AA-UWp">
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Vorrunde 1"/>
+                                                <connections>
+                                                    <action selector="showRound:" destination="v3f-i9-DX6" eventType="primaryActionTriggered" id="Hkg-2X-Sr1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl2-Zl-pGv">
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Vorrunde 2"/>
+                                                <connections>
+                                                    <action selector="showRound:" destination="v3f-i9-DX6" eventType="primaryActionTriggered" id="9OX-EM-JJA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-I9-oxR">
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Finalrunde"/>
+                                                <connections>
+                                                    <action selector="showRound:" destination="v3f-i9-DX6" eventType="primaryActionTriggered" id="Iv1-FE-z9P"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="g2c-8t-G9y" firstAttribute="centerX" secondItem="caf-RD-Ibn" secondAttribute="centerX" id="ft8-Vb-oSx"/>
+                            <constraint firstItem="g2c-8t-G9y" firstAttribute="centerY" secondItem="caf-RD-Ibn" secondAttribute="centerY" id="iTE-fK-dMC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="bAI-Gv-7ka" kind="show" identifier="showRound" id="CfH-vu-Tw4"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8N-Cs-ogU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-331" y="1231"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="p3v-jv-y2i">
+            <objects>
+                <viewController id="bAI-Gv-7ka" customClass="GameViewController" customModule="Macopardy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P8e-hj-MM9"/>
+                        <viewControllerLayoutGuide type="bottom" id="1iW-Tf-FoZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5aW-Y8-FMN">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vTz-aa-77D">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Runde" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhV-Hm-3I9">
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="obR-YZ-qVr">
+                                        <frame key="frameInset" minY="70" width="1880" height="874"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zlo-ig-9ie">
+                                                <frame key="frameInset" width="455" height="874"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjd-t4-07J">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OuG-sT-wXd">
+                                                        <frame key="frameInset" minY="70" width="455" height="804"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMC-Rd-EZf">
+                                                                <frame key="frameInset" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="23"/>
+                                                                <connections>
+                                                                    <action selector="show23:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="xtf-Op-Kok"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agq-5r-RZ9">
+                                                                <frame key="frameInset" minY="206" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="42"/>
+                                                                <connections>
+                                                                    <action selector="show42:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="pN1-Xb-XaG"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-qh-30F">
+                                                                <frame key="frameInset" minY="412" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="65"/>
+                                                                <connections>
+                                                                    <action selector="show65:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="MHh-Xm-wuw"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejj-ZQ-KBE">
+                                                                <frame key="frameInset" minY="618" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="107"/>
+                                                                <connections>
+                                                                    <action selector="show107:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="3t3-bp-cWm"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f17-Bn-mZS">
+                                                <frame key="frameInset" minX="475" width="455" height="874"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqr-f1-PYY">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pGJ-lI-RgK">
+                                                        <frame key="frameInset" minY="70" width="455" height="804"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxv-31-XoY">
+                                                                <frame key="frameInset" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="23"/>
+                                                                <connections>
+                                                                    <action selector="show23:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="bnO-CZ-YEI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ma-ww-eJI">
+                                                                <frame key="frameInset" minY="206" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="42"/>
+                                                                <connections>
+                                                                    <action selector="show42:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="oID-DP-Vbc"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikz-TX-aII">
+                                                                <frame key="frameInset" minY="412" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="65"/>
+                                                                <connections>
+                                                                    <action selector="show65:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="w1A-jk-dIa"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-hk-K5n">
+                                                                <frame key="frameInset" minY="618" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="107"/>
+                                                                <connections>
+                                                                    <action selector="show107:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="pgW-sA-bcO"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2QT-Ae-JNi">
+                                                <frame key="frameInset" minX="950" width="455" height="874"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PM-1n-OTC">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B8h-Ec-YIY">
+                                                        <frame key="frameInset" minY="70" width="455" height="804"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn1-KD-2oJ">
+                                                                <frame key="frameInset" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="23"/>
+                                                                <connections>
+                                                                    <action selector="show23:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="ssf-BO-STg"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkM-4f-u08">
+                                                                <frame key="frameInset" minY="206" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="42"/>
+                                                                <connections>
+                                                                    <action selector="show42:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="LcH-X6-WE9"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkf-yo-Oqk">
+                                                                <frame key="frameInset" minY="412" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="65"/>
+                                                                <connections>
+                                                                    <action selector="show65:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="ryN-1h-rIe"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CS-C7-cIZ">
+                                                                <frame key="frameInset" minY="618" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="107"/>
+                                                                <connections>
+                                                                    <action selector="show107:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="EY0-G3-CsH"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MNa-xb-68w">
+                                                <frame key="frameInset" minX="1425" width="455" height="874"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRI-TN-680">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-Fl-Ugg">
+                                                        <frame key="frameInset" minY="70" width="455" height="804"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npl-te-wbr">
+                                                                <frame key="frameInset" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="23"/>
+                                                                <connections>
+                                                                    <action selector="show23:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="SyU-9B-hcv"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pml-Wx-flB">
+                                                                <frame key="frameInset" minY="206" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="42"/>
+                                                                <connections>
+                                                                    <action selector="show42:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="XCI-mG-r87"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiG-EB-IIJ">
+                                                                <frame key="frameInset" minY="412" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="65"/>
+                                                                <connections>
+                                                                    <action selector="show65:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="tHy-1l-udy"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEh-cy-YrZ">
+                                                                <frame key="frameInset" minY="618" width="455" height="186"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                                <state key="normal" title="107"/>
+                                                                <connections>
+                                                                    <action selector="show107:" destination="bAI-Gv-7ka" eventType="primaryActionTriggered" id="KCl-rJ-IIy"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q1H-tg-hMV">
+                                        <frame key="frameInset" minY="954" width="1880" height="86"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxu-4p-iYw">
+                                                <frame key="frameInset" width="455" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Spieler 1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZS-rO-lmZ">
+                                                <frame key="frameInset" minX="475" width="455" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Spieler 2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3J-5e-Ii3">
+                                                <frame key="frameInset" minX="950" width="455" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Spieler 3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoi-nx-2He">
+                                                <frame key="frameInset" minX="1425" width="455" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Spieler 4"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vTz-aa-77D" secondAttribute="trailing" constant="20" id="3Fu-tL-5G6"/>
+                            <constraint firstItem="vTz-aa-77D" firstAttribute="leading" secondItem="5aW-Y8-FMN" secondAttribute="leading" constant="20" id="JjP-rs-nCz"/>
+                            <constraint firstItem="1iW-Tf-FoZ" firstAttribute="top" secondItem="vTz-aa-77D" secondAttribute="bottom" constant="20" id="SKm-Il-HlJ"/>
+                            <constraint firstItem="vTz-aa-77D" firstAttribute="top" secondItem="P8e-hj-MM9" secondAttribute="bottom" constant="20" id="cQx-M7-qqQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label0" destination="Yjd-t4-07J" id="h4O-MG-kfn"/>
+                        <outlet property="label1" destination="mqr-f1-PYY" id="Mxc-Zt-Tgw"/>
+                        <outlet property="label2" destination="7PM-1n-OTC" id="jlO-Mx-o1P"/>
+                        <outlet property="label3" destination="mRI-TN-680" id="MM0-cU-WEF"/>
+                        <outlet property="playerFourButton" destination="Zoi-nx-2He" id="buI-BF-ueg"/>
+                        <outlet property="playerOneButton" destination="cxu-4p-iYw" id="FCA-jr-IVH"/>
+                        <outlet property="playerThreeButton" destination="h3J-5e-Ii3" id="OvM-rK-8La"/>
+                        <outlet property="playerTwoButton" destination="2ZS-rO-lmZ" id="Ku5-Ey-P45"/>
+                        <segue destination="177-aX-i7y" kind="show" identifier="showAnswer" id="dUS-Up-mwr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3c-a3-x6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="1230"/>
+        </scene>
+        <!--Answer View Controller-->
+        <scene sceneID="alo-bD-oae">
+            <objects>
+                <viewController id="177-aX-i7y" customClass="AnswerViewController" customModule="Macopardy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="49U-YH-cYn"/>
+                        <viewControllerLayoutGuide type="bottom" id="veQ-HL-9s5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mfI-ho-DNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zux-5v-eBf">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x06-O3-sZp">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HZA-O2-CSk"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlP-ME-flU">
+                                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1Q-UB-pcg">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="vYP-17-ei2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <connections>
+                                                    <action selector="showQuestion:" destination="177-aX-i7y" eventType="primaryActionTriggered" id="UJp-XF-W8s"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="51o-eG-p1M">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbc-49-JtV">
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Falsch"/>
+                                                <connections>
+                                                    <action selector="wrong:" destination="177-aX-i7y" eventType="primaryActionTriggered" id="cbx-Nc-wNN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCh-aM-HWl">
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Spieler 1"/>
+                                                <connections>
+                                                    <action selector="correct:" destination="177-aX-i7y" eventType="primaryActionTriggered" id="0UY-iO-xCe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTk-HH-TrB">
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Spieler 2"/>
+                                                <connections>
+                                                    <action selector="correct:" destination="177-aX-i7y" eventType="primaryActionTriggered" id="bNf-ea-Yjm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biQ-vC-2zb">
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Spieler 3"/>
+                                                <connections>
+                                                    <action selector="correct:" destination="177-aX-i7y" eventType="primaryActionTriggered" id="5rf-Yk-crx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anm-lB-oIK">
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Spieler 4"/>
+                                                <connections>
+                                                    <action selector="correct:" destination="177-aX-i7y" eventType="primaryActionTriggered" id="6ws-LW-KeL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Zl7-z7-unx"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zux-5v-eBf" firstAttribute="leading" secondItem="mfI-ho-DNZ" secondAttribute="leading" constant="20" id="Erl-WI-Mc1"/>
+                            <constraint firstItem="veQ-HL-9s5" firstAttribute="top" secondItem="zux-5v-eBf" secondAttribute="bottom" constant="20" id="XSZ-JO-La1"/>
+                            <constraint firstItem="zux-5v-eBf" firstAttribute="top" secondItem="49U-YH-cYn" secondAttribute="bottom" constant="20" id="aM4-j5-27Q"/>
+                            <constraint firstAttribute="trailing" secondItem="zux-5v-eBf" secondAttribute="trailing" constant="20" id="qDJ-uE-2HH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="qlP-ME-flU" id="vY6-3I-GuU"/>
+                        <outlet property="imageView" destination="HZA-O2-CSk" id="N1s-zy-Zuy"/>
+                        <outlet property="playerFourButton" destination="Anm-lB-oIK" id="cld-A1-nzU"/>
+                        <outlet property="playerOneButton" destination="hCh-aM-HWl" id="24g-64-8LR"/>
+                        <outlet property="playerThreeButton" destination="biQ-vC-2zb" id="vCT-Xa-Z1A"/>
+                        <outlet property="playerTwoButton" destination="wTk-HH-TrB" id="eNs-tP-sbM"/>
+                        <outlet property="questionButton" destination="R1Q-UB-pcg" id="4Sn-5R-fVV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfg-OT-ydg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4130" y="1230"/>
         </scene>
     </scenes>
 </document>
