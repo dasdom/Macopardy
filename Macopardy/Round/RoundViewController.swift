@@ -22,6 +22,10 @@ class RoundViewController: UIViewController {
       switch button.tag {
       case 0:
         plistName = "round1"
+      case 1:
+        plistName = "round2"
+      case 2:
+        plistName = "round3"
       default:
         break
       }

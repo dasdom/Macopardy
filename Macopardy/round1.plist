@@ -10,14 +10,14 @@
 			<key>answer</key>
 			<string>#pragma clang diagnostic push</string>
 			<key>question</key>
-			<string>Wie leitet man den Befehl an den Compiler an, bestimmte Warnings in einem Code-Block nicht anzuwenden?</string>
+			<string>Wie speichert man den aktuellen Compiler-Status?</string>
 		</dict>
 		<key>42</key>
 		<dict>
 			<key>answer</key>
-			<string>k.A.</string>
+			<string>@compatibility_alias Foo Bar</string>
 			<key>question</key>
-			<string>k.A.</string>
+			<string>Wie erzeugt man einen Alias für eine Klasse?</string>
 		</dict>
 		<key>65</key>
 		<dict>
@@ -54,16 +54,80 @@
 		<key>65</key>
 		<dict>
 			<key>question</key>
-			<string>Wie sieht die UI des Bluetooth Explorer (Bluetooth Status) in Xcode 7 aus?</string>
+			<string>Wie sah Xcode 1.0 aus?</string>
 			<key>image</key>
-			<string>bluetooth_explorer</string>
+			<string>tools_65</string>
 		</dict>
 		<key>107</key>
 		<dict>
 			<key>question</key>
 			<string>Wie sieht die UI des Accessibility Inspectors in Xcode 7 aus?</string>
 			<key>image</key>
-			<string>accessibility_inspector</string>
+			<string>tools_107</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Objective-C</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>Speicheradresse (Start) des Codeblocks einer Methode.</string>
+			<key>question</key>
+			<string>Was ist IMP?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>Diese Variable teilt dem Objekt mit, von welcher Klasse es eine Instanz ist.</string>
+			<key>question</key>
+			<string>Was ist die isa-Variable?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>__block</string>
+			<key>question</key>
+			<string>Wie definiert man eine Variable außerhalb eines Blocks, so dass man ihren Wert innerhalb des Blocks manipulieren kann?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>answer</key>
+			<string>Block_copy();</string>
+			<key>question</key>
+			<string>Mit welchem Befehl kopiert man einen Block auf den Heap?</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Zitate</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>&quot;Are you getting it?&quot;</string>
+			<key>question</key>
+			<string>Welche Worte folgten bei der Vorstellung des ersten iPhones auf das Mantra &quot;A Phone. A wide screen iPod. An internet communication device.&quot;?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>&quot;Yes, it&apos;s true!&quot;</string>
+			<key>question</key>
+			<string>Was sagte Steve Jobs auf der WWDC 2007 zum Wechsel auf Intel-Prozessoren?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>&quot;I underestimated how good German beer is,&quot;</string>
+			<key>question</key>
+			<string>Was waren die letzten Worte, die Gray Powell in sein iPhone 4 tippte, bevor er es verlor?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>answer</key>
+			<string>&quot;Are you a man or a woman?&quot;</string>
+			<key>question</key>
+			<string>Was war die zweite Frage, die Jobs Siri stellte?</string>
 		</dict>
 	</dict>
 </array>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Swift</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>??</string>
+			<key>question</key>
+			<string>Was ist der Nil-Coalescing-Opertator?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>@UIApplicationMain</string>
+			<key>question</key>
+			<string>Welches Attribut kennzeichnet eine Klasse als Application-Delegate?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>foo: while ... { }</string>
+			<key>question</key>
+			<string>Wie definiert man ein &quot;labeled while&quot;?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>answer</key>
+			<string>18.07.2010</string>
+			<key>question</key>
+			<string>An welchem Tag wurde der Commit erstellt, der Swift startete.</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Grundlagen</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>NSMapTable</string>
+			<key>question</key>
+			<string>Welcher Collectiontyp des Foundation-Frameworks erlaubt es, Objekt &quot;weak&quot; zu speichern?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b</string>
+			<key>question</key>
+			<string>Welche Regex matcht eine IP-Adresse?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>[NSURLSessionConfiguration ephemeralSessionConfiguration]</string>
+			<key>question</key>
+			<string>Welche NSURLSessionConfiguration erzeugt eine Konfiguration, die keine Daten persistiert?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>answer</key>
+			<string>objc_getAssociatedObject</string>
+			<key>question</key>
+			<string>Welche Funktion gibt den Wert eines assoziierten Objektes zu einem Schlüssel zurück?</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Frameworks</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>GLUT
+Plattform + Aufgabe des Frameworks!</string>
+			<key>question</key>
+			<string>Contains interfaces for the OpenGL Utility Toolkit, which provides a platform-independent interface for managing windows.  (macOS)</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>PushKit
+Plattform + Aufgabe des Frameworks!</string>
+			<key>question</key>
+			<string>Provides a way for VoIP apps to register with a device. (iOS)</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>PCSC
+Plattform + Aufgabe des Frameworks!</string>
+			<key>question</key>
+			<string>Contains interfaces for interacting with smart card devices. (macOS)</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>answer</key>
+			<string>GSS
+Plattform + Aufgabe des Frameworks!</string>
+			<key>question</key>
+			<string>Provides a standard set of security-related services. (iOS)</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hardware</string>
+		<key>23</key>
+		<dict>
+			<key>image</key>
+			<string>hardware_23</string>
+			<key>question</key>
+			<string>Wie sah der The 20th Anniversary Macintosh aus?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>image</key>
+			<string>hardware_42</string>
+			<key>question</key>
+			<string>Wie sah die Spielekonsole von Apple, Pippin, aus?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>image</key>
+			<string>hardware_65</string>
+			<key>question</key>
+			<string>Wie sah die Uhr aus, die 1995 zum Upgrade auf System 7.5 dazu gab?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>image</key>
+			<string>hardware_107</string>
+			<key>question</key>
+			<string>Was ist die Bluebox, die Steve Wozniak gebaut hat?</string>
+		</dict>
+	</dict>
+</array>
+</plist>

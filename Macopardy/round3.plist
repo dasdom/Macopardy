@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Security</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>SecItemCopyMatching</string>
+			<key>question</key>
+			<string>Mit welcher Funktion liest man einen Wert aus der Keychain aus?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>NSFileProtectionCompleteUnlessOpen</string>
+			<key>question</key>
+			<string>Mit welcher Schutzklasse kann man eine Datei im Hintergrund verschlüsselt anlegen?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>NSAllowsArbitraryLoadsInMedia</string>
+			<key>question</key>
+			<string>Welcher ATS-Schlüssel erlaubt das Laden unverschlüsselter Inhalte über das AV Foundation Framework?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>image</key>
+			<string>security_107</string>
+			<key>question</key>
+			<string>Wie konnte man unter iOS 5.1 eine Datei vom Backup ausschließen?</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Auto Layout</string>
+		<key>23</key>
+		<dict>
+			<key>image</key>
+			<string>autolayout_23</string>
+			<key>question</key>
+			<string>Welcher Fehler taucht in der Konsole auf, wenn man vergisst bei einer View `translatesAutoresizingMaskIntoConstraints` auf false zu setzten.</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>AlignAllBaseline</string>
+			<key>question</key>
+			<string>Wie lautet die Option, die alle Elemente eines Visual Format Language String anhand der Baseline vertikal ausrichtet.</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>Die bevorzugte maximale Breite (in Points) für ein mehrzeiliges Label.</string>
+			<key>question</key>
+			<string>Was ist preferredMaxLayoutWidth?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>answer</key>
+			<string>Gibt die Constraints zurück, die das Layout für eine bestimmte Achse beeinflussen.</string>
+			<key>question</key>
+			<string>Was ist constraintsAffectingLayoutForAxis?</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Geschichte</string>
+		<key>23</key>
+		<dict>
+			<key>image</key>
+			<string>geschichte_23</string>
+			<key>question</key>
+			<string>Wie begann die &quot;Newton-Tour&quot;?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>image</key>
+			<string>geschichte_42</string>
+			<key>question</key>
+			<string>Was ist Apple Pascal?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>Motorola ROKR E-1</string>
+			<key>question</key>
+			<string>Welches Telefon konnte als erstes iTunes Musik abspielen?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>image</key>
+			<string>geschichte_107</string>
+			<key>question</key>
+			<string>Wie sieht eine Addition von vier Summanden in Apple-II-Assembler aus?</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Geschichte</string>
+		<key>23</key>
+		<dict>
+			<key>answer</key>
+			<string>&quot;MMM&quot;</string>
+			<key>question</key>
+			<string>Wie lautet der Formatstring zur Anzeige der Abkürzung des Monats?</string>
+		</dict>
+		<key>42</key>
+		<dict>
+			<key>answer</key>
+			<string>&quot;Q&quot;</string>
+			<key>question</key>
+			<string>Wie lautet der Formatstring zur Anzeige des Quartals?</string>
+		</dict>
+		<key>65</key>
+		<dict>
+			<key>answer</key>
+			<string>&quot;Y&quot;</string>
+			<key>question</key>
+			<string>Wie lautet der Formatstring zur Anzeige des Wochenjahres?</string>
+		</dict>
+		<key>107</key>
+		<dict>
+			<key>answer</key>
+			<string>&quot;Anno Domini&quot;</string>
+			<key>question</key>
+			<string>Was erhält man, wenn man das heutige Datum durch einen NSDateFormatter mit den Formatstring &quot;GGGG&quot; in einen String umwandelt?</string>
+		</dict>
+	</dict>
+</array>
+</plist>

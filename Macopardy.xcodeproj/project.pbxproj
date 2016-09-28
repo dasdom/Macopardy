@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F29111B51D9AFF2E0015A871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29111B31D9AFF2E0015A871 /* Main.storyboard */; };
+		F29111BA1D9AFF2E0015A871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29111B81D9AFF2E0015A871 /* LaunchScreen.storyboard */; };
+		F29111C11D9B04FA0015A871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E39D491D969D09005F0F6D /* AppDelegate.swift */; };
+		F29111C21D9B04FE0015A871 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A3B6551D96E5B300D25D78 /* Color.swift */; };
+		F29111C31D9B05030015A871 /* RoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E39D5E1D96B51D005F0F6D /* RoundViewController.swift */; };
+		F29111C41D9B05220015A871 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E39D611D96B894005F0F6D /* GameViewController.swift */; };
+		F29111C51D9B05250015A871 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E39D641D96BFAB005F0F6D /* AnswerViewController.swift */; };
+		F29111C61D9B05370015A871 /* round1.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2E39D5C1D96B39F005F0F6D /* round1.plist */; };
+		F29111C71D9B0EA80015A871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E39D501D969D09005F0F6D /* Assets.xcassets */; };
+		F29111C91D9C52E00015A871 /* round2.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29111C81D9C52E00015A871 /* round2.plist */; };
+		F29111CA1D9C5D8C0015A871 /* round2.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29111C81D9C52E00015A871 /* round2.plist */; };
+		F29111CC1D9C5E270015A871 /* round3.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29111CB1D9C5E270015A871 /* round3.plist */; };
+		F29111CD1D9C5E270015A871 /* round3.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29111CB1D9C5E270015A871 /* round3.plist */; };
 		F2A3B6561D96E5B300D25D78 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A3B6551D96E5B300D25D78 /* Color.swift */; };
 		F2E39D4A1D969D09005F0F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E39D491D969D09005F0F6D /* AppDelegate.swift */; };
 		F2E39D4F1D969D09005F0F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E39D4D1D969D09005F0F6D /* Main.storyboard */; };
@@ -18,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F29111AD1D9AFF2E0015A871 /* MacopardyiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacopardyiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F29111B41D9AFF2E0015A871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F29111B91D9AFF2E0015A871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F29111BB1D9AFF2E0015A871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F29111C81D9C52E00015A871 /* round2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = round2.plist; sourceTree = "<group>"; };
+		F29111CB1D9C5E270015A871 /* round3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = round3.plist; sourceTree = "<group>"; };
 		F2A3B6551D96E5B300D25D78 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F2E39D461D969D09005F0F6D /* Macopardy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macopardy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E39D491D969D09005F0F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F29111AA1D9AFF2E0015A871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F2E39D431D969D09005F0F6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +67,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F29111AE1D9AFF2E0015A871 /* MacopardyiOS */ = {
+			isa = PBXGroup;
+			children = (
+				F29111B31D9AFF2E0015A871 /* Main.storyboard */,
+				F29111B81D9AFF2E0015A871 /* LaunchScreen.storyboard */,
+				F29111BB1D9AFF2E0015A871 /* Info.plist */,
+			);
+			path = MacopardyiOS;
+			sourceTree = "<group>";
+		};
 		F2E39D3D1D969D09005F0F6D = {
 			isa = PBXGroup;
 			children = (
 				F2E39D481D969D09005F0F6D /* Macopardy */,
+				F29111AE1D9AFF2E0015A871 /* MacopardyiOS */,
 				F2E39D471D969D09005F0F6D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				F2E39D461D969D09005F0F6D /* Macopardy.app */,
+				F29111AD1D9AFF2E0015A871 /* MacopardyiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +105,8 @@
 				F2E39D661D96BFAD005F0F6D /* Answer */,
 				F2E39D4D1D969D09005F0F6D /* Main.storyboard */,
 				F2E39D5C1D96B39F005F0F6D /* round1.plist */,
+				F29111C81D9C52E00015A871 /* round2.plist */,
+				F29111CB1D9C5E270015A871 /* round3.plist */,
 				F2E39D501D969D09005F0F6D /* Assets.xcassets */,
 				F2E39D521D969D09005F0F6D /* Info.plist */,
 			);
@@ -100,6 +140,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F29111AC1D9AFF2E0015A871 /* MacopardyiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F29111BE1D9AFF2E0015A871 /* Build configuration list for PBXNativeTarget "MacopardyiOS" */;
+			buildPhases = (
+				F29111A91D9AFF2E0015A871 /* Sources */,
+				F29111AA1D9AFF2E0015A871 /* Frameworks */,
+				F29111AB1D9AFF2E0015A871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacopardyiOS;
+			productName = MacopardyiOS;
+			productReference = F29111AD1D9AFF2E0015A871 /* MacopardyiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F2E39D451D969D09005F0F6D /* Macopardy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2E39D551D969D09005F0F6D /* Build configuration list for PBXNativeTarget "Macopardy" */;
@@ -127,6 +184,10 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = dasdom;
 				TargetAttributes = {
+					F29111AC1D9AFF2E0015A871 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					F2E39D451D969D09005F0F6D = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
@@ -147,15 +208,31 @@
 			projectRoot = "";
 			targets = (
 				F2E39D451D969D09005F0F6D /* Macopardy */,
+				F29111AC1D9AFF2E0015A871 /* MacopardyiOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F29111AB1D9AFF2E0015A871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29111CA1D9C5D8C0015A871 /* round2.plist in Resources */,
+				F29111CD1D9C5E270015A871 /* round3.plist in Resources */,
+				F29111C61D9B05370015A871 /* round1.plist in Resources */,
+				F29111BA1D9AFF2E0015A871 /* LaunchScreen.storyboard in Resources */,
+				F29111C71D9B0EA80015A871 /* Assets.xcassets in Resources */,
+				F29111B51D9AFF2E0015A871 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F2E39D441D969D09005F0F6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29111CC1D9C5E270015A871 /* round3.plist in Resources */,
+				F29111C91D9C52E00015A871 /* round2.plist in Resources */,
 				F2E39D511D969D09005F0F6D /* Assets.xcassets in Resources */,
 				F2E39D5D1D96B39F005F0F6D /* round1.plist in Resources */,
 				F2E39D4F1D969D09005F0F6D /* Main.storyboard in Resources */,
@@ -165,6 +242,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F29111A91D9AFF2E0015A871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29111C11D9B04FA0015A871 /* AppDelegate.swift in Sources */,
+				F29111C51D9B05250015A871 /* AnswerViewController.swift in Sources */,
+				F29111C21D9B04FE0015A871 /* Color.swift in Sources */,
+				F29111C31D9B05030015A871 /* RoundViewController.swift in Sources */,
+				F29111C41D9B05220015A871 /* GameViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F2E39D421D969D09005F0F6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,6 +269,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F29111B31D9AFF2E0015A871 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29111B41D9AFF2E0015A871 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F29111B81D9AFF2E0015A871 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29111B91D9AFF2E0015A871 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		F2E39D4D1D969D09005F0F6D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -191,6 +296,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F29111BC1D9AFF2E0015A871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MacopardyiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandpainless.MacopardyiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F29111BD1D9AFF2E0015A871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MacopardyiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandpainless.MacopardyiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F2E39D531D969D09005F0F6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -311,6 +448,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F29111BE1D9AFF2E0015A871 /* Build configuration list for PBXNativeTarget "MacopardyiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F29111BC1D9AFF2E0015A871 /* Debug */,
+				F29111BD1D9AFF2E0015A871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F2E39D411D969D09005F0F6D /* Build configuration list for PBXProject "Macopardy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
