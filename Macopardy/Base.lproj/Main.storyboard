@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3f-i9-DX6">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3f-i9-DX6">
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,9 +56,25 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dasdom" translatesAutoresizingMaskIntoConstraints="NO" id="koD-WM-fLC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="34B-Wh-QGS"/>
+                                    <constraint firstAttribute="height" constant="240" id="zJj-Ia-dgb"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocoanehead" translatesAutoresizingMaskIntoConstraints="NO" id="QMN-zZ-cXB">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Av0-ud-lpv"/>
+                                    <constraint firstAttribute="width" constant="240" id="vvi-1P-1vC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="koD-WM-fLC" firstAttribute="leading" secondItem="caf-RD-Ibn" secondAttribute="leadingMargin" id="ITr-jn-Bng"/>
+                            <constraint firstItem="QMN-zZ-cXB" firstAttribute="trailing" secondItem="caf-RD-Ibn" secondAttribute="trailingMargin" id="SfF-FX-hRY"/>
+                            <constraint firstItem="n4G-Uj-evV" firstAttribute="top" secondItem="QMN-zZ-cXB" secondAttribute="bottom" constant="20" id="YCO-eP-aOU"/>
                             <constraint firstItem="g2c-8t-G9y" firstAttribute="centerX" secondItem="caf-RD-Ibn" secondAttribute="centerX" id="ft8-Vb-oSx"/>
+                            <constraint firstItem="n4G-Uj-evV" firstAttribute="top" secondItem="koD-WM-fLC" secondAttribute="bottom" constant="20" id="hFo-63-gZg"/>
                             <constraint firstItem="g2c-8t-G9y" firstAttribute="centerY" secondItem="caf-RD-Ibn" secondAttribute="centerY" id="iTE-fK-dMC"/>
                         </constraints>
                     </view>
@@ -433,4 +450,8 @@
             <point key="canvasLocation" x="4130" y="1230"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cocoanehead" width="508" height="527"/>
+        <image name="dasdom" width="512" height="534"/>
+    </resources>
 </document>

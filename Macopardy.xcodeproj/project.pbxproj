@@ -455,6 +455,7 @@
 				F29111BD1D9AFF2E0015A871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2E39D411D969D09005F0F6D /* Build configuration list for PBXProject "Macopardy" */ = {
 			isa = XCConfigurationList;
