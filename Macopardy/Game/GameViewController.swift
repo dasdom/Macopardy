@@ -14,6 +14,9 @@ final class GameViewController: UIViewController {
   var categories: [[String:Any]] = []
   var correctTag: Int? = nil
   private var scores: [String:[String:[Int]]] = [:]
+  var currentSelectedUser: Int? = nil
+  var playerKeys: [String] = ["Foo", "Spieler 1", "Spieler 2", "Spieler 3", "Spieler 4"]
+  var playerNames: [String:String] = ["Spieler 1":"Spieler 1", "Spieler 2":"Spieler 2", "Spieler 3":"Spieler 3", "Spieler 4":"Spieler 4"]
   
   fileprivate var centralManager: CBCentralManager? = nil
   fileprivate var peripherals: [CBPeripheral] = []
@@ -34,7 +37,7 @@ final class GameViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    centralManager = CBCentralManager(delegate: self, queue: nil)
+    //    centralManager = CBCentralManager(delegate: self, queue: nil)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +55,7 @@ final class GameViewController: UIViewController {
     playerTwoButton.backgroundColor = UIColor.playerTwo
     playerThreeButton.backgroundColor = UIColor.playerThree
     playerFourButton.backgroundColor = UIColor.playerFour
-
+    
     defer {
       self.correctTag = nil
       self.currentSelectedButton = nil
@@ -69,21 +72,18 @@ final class GameViewController: UIViewController {
     
     switch correctTag {
     case 1:
-      playerKey = "Spieler 1"
       currentSelectedButton.backgroundColor = UIColor.playerOne
     case 2:
-      playerKey = "Spieler 2"
       currentSelectedButton.backgroundColor = UIColor.playerTwo
     case 3:
-      playerKey = "Spieler 3"
       currentSelectedButton.backgroundColor = UIColor.playerThree
     case 4:
-      playerKey = "Spieler 4"
       currentSelectedButton.backgroundColor = UIColor.playerFour
     default:
-      currentSelectedButton.backgroundColor = UIColor.gray
+      currentSelectedButton.backgroundColor = UIColor.black
     }
-
+    
+    playerKey = playerKeys[correctTag]
     if let thePlayerKey = playerKey {
       var playerScores = scores[thePlayerKey] ?? [String:[Int]]()
       var categoryScores = playerScores[categoryName] ?? [Int]()
@@ -98,20 +98,24 @@ final class GameViewController: UIViewController {
         totalPlayerScore += categoryScores.reduce(0, +)
       }
       
-      let labelText = "\(playerKey): \(totalPlayerScore)"
-      switch playerKey {
-      case "Spieler 1":
-        playerOneButton.setTitle(labelText, for: .normal)
-      case "Spieler 2":
-        playerTwoButton.setTitle(labelText, for: .normal)
-      case "Spieler 3":
-        playerThreeButton.setTitle(labelText, for: .normal)
-      case "Spieler 4":
-        playerFourButton.setTitle(labelText, for: .normal)
-      default:
-        break
+      if let playerName = playerNames[playerKey] {
+        let labelText = "\(playerName): \(totalPlayerScore)"
+        switch playerKey {
+        case playerKeys[1]:
+          playerOneButton.setTitle(labelText, for: .normal)
+        case playerKeys[2]:
+          playerTwoButton.setTitle(labelText, for: .normal)
+        case playerKeys[3]:
+          playerThreeButton.setTitle(labelText, for: .normal)
+        case playerKeys[4]:
+          playerFourButton.setTitle(labelText, for: .normal)
+        default:
+          break
+        }
       }
     }
+    
+    currentSelectedUser = nil
   }
   
   @IBAction func show23(_ sender: UIButton) {
@@ -140,11 +144,41 @@ final class GameViewController: UIViewController {
     performSegue(withIdentifier: "showAnswer", sender: level)
   }
   
+  @IBAction func showNameInput(_ sender: UIButton) {
+    currentSelectedUser = sender.tag
+    performSegue(withIdentifier: "nameInput", sender: nil)
+  }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showAnswer" {
       guard let level = sender as? [String:String] else { print("sender is not a [String:String]"); return }
       let next = segue.destination as? AnswerViewController
       next?.level = level
+      next?.playerKeys = playerKeys
+      next?.playerNames = playerNames
+    } else if segue.identifier == "nameInput" {
+      let next = segue .destination as? NameInputViewController
+      next?.delegate = self
+    }
+  }
+}
+
+extension GameViewController: NameInputProtocol {
+  func inputDone(with name: String) {
+    if let currentSelectedUser = currentSelectedUser {
+      playerNames[playerKeys[currentSelectedUser]] = name
+      switch currentSelectedUser {
+      case 1:
+        playerOneButton.setTitle(name, for: .normal)
+      case 2:
+        playerTwoButton.setTitle(name, for: .normal)
+      case 3:
+        playerThreeButton.setTitle(name, for: .normal)
+      case 4:
+        playerFourButton.setTitle(name, for: .normal)
+      default:
+        break
+      }
     }
   }
 }

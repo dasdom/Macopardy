@@ -100,7 +100,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Geschichte</string>
+		<string>NSDateFormatter</string>
 		<key>23</key>
 		<dict>
 			<key>answer</key>

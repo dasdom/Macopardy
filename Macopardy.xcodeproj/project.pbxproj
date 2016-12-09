@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F29111B51D9AFF2E0015A871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29111B31D9AFF2E0015A871 /* Main.storyboard */; };
 		F29111BA1D9AFF2E0015A871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29111B81D9AFF2E0015A871 /* LaunchScreen.storyboard */; };
 		F29111C11D9B04FA0015A871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E39D491D969D09005F0F6D /* AppDelegate.swift */; };
 		F29111C21D9B04FE0015A871 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A3B6551D96E5B300D25D78 /* Color.swift */; };
@@ -20,6 +19,9 @@
 		F29111CA1D9C5D8C0015A871 /* round2.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29111C81D9C52E00015A871 /* round2.plist */; };
 		F29111CC1D9C5E270015A871 /* round3.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29111CB1D9C5E270015A871 /* round3.plist */; };
 		F29111CD1D9C5E270015A871 /* round3.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29111CB1D9C5E270015A871 /* round3.plist */; };
+		F29111F81D9E869E0015A871 /* NameInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29111F71D9E869E0015A871 /* NameInputViewController.swift */; };
+		F29111F91D9E86A20015A871 /* NameInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29111F71D9E869E0015A871 /* NameInputViewController.swift */; };
+		F29111FB1D9E86D40015A871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29111B31D9AFF2E0015A871 /* Main.storyboard */; };
 		F2A3B6561D96E5B300D25D78 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A3B6551D96E5B300D25D78 /* Color.swift */; };
 		F2E39D4A1D969D09005F0F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E39D491D969D09005F0F6D /* AppDelegate.swift */; };
 		F2E39D4F1D969D09005F0F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E39D4D1D969D09005F0F6D /* Main.storyboard */; };
@@ -37,6 +39,7 @@
 		F29111BB1D9AFF2E0015A871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F29111C81D9C52E00015A871 /* round2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = round2.plist; sourceTree = "<group>"; };
 		F29111CB1D9C5E270015A871 /* round3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = round3.plist; sourceTree = "<group>"; };
+		F29111F71D9E869E0015A871 /* NameInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInputViewController.swift; path = Game/NameInputViewController.swift; sourceTree = "<group>"; };
 		F2A3B6551D96E5B300D25D78 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F2E39D461D969D09005F0F6D /* Macopardy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macopardy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E39D491D969D09005F0F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				F2E39D611D96B894005F0F6D /* GameViewController.swift */,
+				F29111F71D9E869E0015A871 /* NameInputViewController.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -186,10 +190,12 @@
 				TargetAttributes = {
 					F29111AC1D9AFF2E0015A871 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q6PD97MRX4;
 						ProvisioningStyle = Automatic;
 					};
 					F2E39D451D969D09005F0F6D = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q6PD97MRX4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -218,12 +224,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29111FB1D9E86D40015A871 /* Main.storyboard in Resources */,
 				F29111CA1D9C5D8C0015A871 /* round2.plist in Resources */,
 				F29111CD1D9C5E270015A871 /* round3.plist in Resources */,
 				F29111C61D9B05370015A871 /* round1.plist in Resources */,
 				F29111BA1D9AFF2E0015A871 /* LaunchScreen.storyboard in Resources */,
 				F29111C71D9B0EA80015A871 /* Assets.xcassets in Resources */,
-				F29111B51D9AFF2E0015A871 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +254,7 @@
 			files = (
 				F29111C11D9B04FA0015A871 /* AppDelegate.swift in Sources */,
 				F29111C51D9B05250015A871 /* AnswerViewController.swift in Sources */,
+				F29111F91D9E86A20015A871 /* NameInputViewController.swift in Sources */,
 				F29111C21D9B04FE0015A871 /* Color.swift in Sources */,
 				F29111C31D9B05030015A871 /* RoundViewController.swift in Sources */,
 				F29111C41D9B05220015A871 /* GameViewController.swift in Sources */,
@@ -260,6 +267,7 @@
 			files = (
 				F2E39D651D96BFAB005F0F6D /* AnswerViewController.swift in Sources */,
 				F2E39D4A1D969D09005F0F6D /* AppDelegate.swift in Sources */,
+				F29111F81D9E869E0015A871 /* NameInputViewController.swift in Sources */,
 				F2E39D621D96B894005F0F6D /* GameViewController.swift in Sources */,
 				F2A3B6561D96E5B300D25D78 /* Color.swift in Sources */,
 				F2E39D5F1D96B51D005F0F6D /* RoundViewController.swift in Sources */,
@@ -301,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q6PD97MRX4;
 				INFOPLIST_FILE = MacopardyiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -317,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q6PD97MRX4;
 				INFOPLIST_FILE = MacopardyiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -424,11 +434,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q6PD97MRX4;
 				INFOPLIST_FILE = Macopardy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandpainless.Macopardy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -437,11 +450,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q6PD97MRX4;
 				INFOPLIST_FILE = Macopardy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftandpainless.Macopardy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

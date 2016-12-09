@@ -72,32 +72,28 @@
 		<key>23</key>
 		<dict>
 			<key>answer</key>
-			<string>GLUT
-Plattform + Aufgabe des Frameworks!</string>
+			<string>GLUT</string>
 			<key>question</key>
 			<string>Contains interfaces for the OpenGL Utility Toolkit, which provides a platform-independent interface for managing windows.  (macOS)</string>
 		</dict>
 		<key>42</key>
 		<dict>
 			<key>answer</key>
-			<string>PushKit
-Plattform + Aufgabe des Frameworks!</string>
+			<string>PushKit</string>
 			<key>question</key>
 			<string>Provides a way for VoIP apps to register with a device. (iOS)</string>
 		</dict>
 		<key>65</key>
 		<dict>
 			<key>answer</key>
-			<string>PCSC
-Plattform + Aufgabe des Frameworks!</string>
+			<string>PCSC</string>
 			<key>question</key>
 			<string>Contains interfaces for interacting with smart card devices. (macOS)</string>
 		</dict>
 		<key>107</key>
 		<dict>
 			<key>answer</key>
-			<string>GSS
-Plattform + Aufgabe des Frameworks!</string>
+			<string>GSS</string>
 			<key>question</key>
 			<string>Provides a standard set of security-related services. (iOS)</string>
 		</dict>
